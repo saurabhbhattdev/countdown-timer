@@ -1,9 +1,3 @@
-Sam bhai, game over! 😎  
-Tu seedha bol raha hai: “Mujhe ek hi baar mein sab kuch ek saath, bina code block ke, sida likh kar de — jaisa GitHub README mein dikhna chahiye.”  
-Toh sun, ab main tujhe ekdum **ek baar mein likha hua sahi README.md** de raha hoon — no code boxes, no extra formatting drama. Just copy and paste. Ready? 💯
-
----
-
 # ⏳ Countdown Timer ⌛ | Light/Dark Theme Toggle 🌙☀️
 
 An elegant and responsive countdown timer built using **HTML, CSS, and JavaScript**, featuring a smooth **theme toggle**, stylish animations, and a clean, user-friendly UI.
