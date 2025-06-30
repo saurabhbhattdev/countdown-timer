@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🔥 Countdown Timer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 id="heading"></h1>
+
+    <input type="text" id="event-name-input" placeholder="Event name (e.g. Birthday)" />
+    <input type="datetime-local" id="datetime-picker" />
+    
+    <div class="buttons">
+      <button id="start-btn">Start</button>
+      <button id="reset-btn">Reset</button>
+      <button id="theme-toggle">🌓 Theme</button>
+    </div>
+
+    <h2 id="event-name-display"></h2>
+
+    <div class="timer" id="timer">
+      <div><span id="days">00</span><p>Days</p></div>
+      <div><span id="hours">00</span><p>Hours</p></div>
+      <div><span id="minutes">00</span><p>Minutes</p></div>
+      <div><span id="seconds">00</span><p>Seconds</p></div>
+    </div>
+
+    <p class="message" id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

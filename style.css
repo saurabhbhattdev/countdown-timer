@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #141e30, #243b55);
+  background-size: 400% 400%;
+  animation: gradientFlow 12s ease infinite;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.37);
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+input, button {
+  padding: 10px 15px;
+  margin: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  font-family: inherit;
+}
+
+#event-name-input, #datetime-picker {
+  background: #fff;
+  color: #000;
+  width: 70%;
+}
+
+button {
+  background: #00ffc3;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+button:hover {
+  background: #00d1aa;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 30px;
+}
+
+.timer div {
+  background: #1f1f1f;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 255, 204, 0.2);
+  min-width: 100px;
+  transition: 0.3s ease all;
+}
+.timer div:hover {
+  transform: translateY(-5px);
+}
+
+/* 🔥 Dark mode digits */
+body:not(.light-mode) .timer span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00ffc3;
+  text-shadow: 0 0 6px rgba(0, 255, 195, 0.7), 0 0 12px rgba(0, 255, 195, 0.4);
+}
+
+/* ☀️ Light theme digits (non-glow) */
+body.light-mode.cream .timer span,
+body.light-mode.frosted .timer span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #222;
+  text-shadow: none;
+}
+
+.timer p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.message {
+  margin-top: 20px;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #ffb347;
+}
+
+.blinking {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media screen and (max-width: 600px) {
+  .timer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .timer div {
+    min-width: 180px;
+  }
+}
+
+/* 🔆 Light Theme: Cream */
+body.light-mode.cream {
+  background-color: #fffef7;
+  color: #2b2b2b;
+}
+body.light-mode.cream .timer div {
+  background: #f7f5f0;
+  box-shadow: 0 5px 15px rgba(200, 180, 150, 0.2);
+}
+
+/* 🧊 Light Theme: Frosted */
+body.light-mode.frosted {
+  background: linear-gradient(to right, #ffffffcc, #f0f0f0cc);
+  color: #1e1e1e;
+  backdrop-filter: blur(6px);
+}
+body.light-mode.frosted .timer div {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid #ccc;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+/* 🎯 Countdown Heading Styling */
+
+/* Dark theme — glowing text */
+body:not(.light-mode) #heading {
+  color: #00ffc3;
+  text-shadow: 0 0 6px rgba(0, 255, 195, 0.6), 0 0 12px rgba(0, 255, 195, 0.3);
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+/* Light themes — solid black heading */
+body.light-mode.cream #heading,
+body.light-mode.frosted #heading {
+  color: #111;
+  text-shadow: none;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
