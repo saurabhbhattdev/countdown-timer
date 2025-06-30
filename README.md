@@ -30,8 +30,6 @@ This project allows users to visualize a live countdown in real-time. With an in
 
 ![App Screenshot](./screenshot.png)
 
-> *Note: Replace this image with your own UI screenshot for better presentation.*
-
 ---
 
 ## 🛠️ Built With
